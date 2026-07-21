@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dra. Naiara Santos — Fisioterapia Dermatofuncional &amp; Estética Avançada</title>
+<meta name="description" content="Dra. Naiara Santos, fisioterapeuta especialista em Dermato-Funcional e Estética Avançada. Drenagem Linfática, Linfotaping, Toxina Botulínica, Contorno Corporal e Recuperação Pós-Parto em Horizonte e Pacajus, CE.">
+<link rel="icon" type="image/jpeg" href="images/logo-icon.jpg">
+<link rel="apple-touch-icon" href="images/logo-icon.jpg">
+<meta property="og:title" content="Dra. Naiara Santos — Fisioterapia Dermatofuncional & Estética Avançada">
+<meta property="og:description" content="Drenagem Linfática, Linfotaping, Toxina Botulínica, Contorno Corporal e Recuperação Pós-Parto. Agende sua avaliação.">
+<meta property="og:image" content="images/hero-naiara.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Petit+Formal+Script&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F7E7E2;
+    --cream-soft:#FDF1EE;
+    --caramel:#C89B75;
+    --caramel-deep:#A9784F;
+    --espresso:#241C17;
+    --espresso-soft:#3B2E25;
+    --blush:#E7B7A6;
+    --gold-line:#B08D57;
+    --white:#FFF7F5;
+    --shadow: 0 20px 50px rgba(36,28,23,0.10);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Jost', sans-serif;
+    background:var(--cream);
+    color:var(--espresso);
+    line-height:1.6;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:600;
+    color:var(--espresso);
+    line-height:1.1;
+  }
+  .script{
+    font-family:'Petit Formal Script', cursive;
+    font-weight:400;
+    color:var(--caramel-deep);
+  }
+  a{text-decoration:none;color:inherit;}
+  ul{list-style:none;}
+  img{display:block;max-width:100%;}
+  .container{
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 32px;
+  }
+  .eyebrow{
+    font-size:13px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:var(--caramel-deep);
+    font-weight:500;
+    display:flex;
+    align-items:center;
+    gap:12px;
+  }
+  .eyebrow::before{
+    content:'';
+    width:36px;
+    height:1px;
+    background:var(--gold-line);
+    display:inline-block;
+  }
+  section{position:relative;}
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:16px 30px;
+    border-radius:100px;
+    font-family:'Jost',sans-serif;
+    font-size:15px;
+    font-weight:500;
+    letter-spacing:0.3px;
+    cursor:pointer;
+    border:none;
+    transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
+    white-space:nowrap;
+  }
+  .btn-primary{
+    background:var(--espresso);
+    color:var(--cream-soft);
+    box-shadow:0 10px 24px rgba(36,28,23,0.22);
+  }
+  .btn-primary:hover{transform:translateY(-3px); box-shadow:0 16px 30px rgba(36,28,23,0.3);}
+  .btn-outline{
+    background:transparent;
+    color:var(--espresso);
+    border:1.5px solid var(--espresso);
+  }
+  .btn-outline:hover{background:var(--espresso); color:var(--cream-soft); transform:translateY(-3px);}
+
+  /* HEADER */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:1000;
+    padding:22px 0;
+    transition:all .35s ease;
+  }
+  header.scrolled{
+    background:rgba(247,239,229,0.92);
+    backdrop-filter:blur(10px);
+    padding:14px 0;
+    box-shadow:0 4px 24px rgba(36,28,23,0.06);
+  }
+  header .container{display:flex; align-items:center; justify-content:space-between;}
+  .brand{display:flex; align-items:center; gap:12px;}
+  .brand-badge{
+    width:56px; height:56px; border-radius:50%;
+    overflow:hidden; border:2px solid var(--caramel);
+    flex-shrink:0;
+    background:#151110;
+    transition:width .3s ease, height .3s ease;
+  }
+  header.scrolled .brand-badge{width:46px; height:46px;}
+  .brand-badge img{width:100%; height:100%; object-fit:cover;}
+  .brand-text{display:flex; flex-direction:column; line-height:1.25;}
+  .brand-text .name{
+    font-family:'Jost', sans-serif; font-weight:600; font-size:19px;
+    letter-spacing:0.5px; text-transform:uppercase; color:var(--espresso);
+  }
+  .brand-text .tag{
+    font-size:10px; letter-spacing:0.5px; text-transform:uppercase;
+    color:var(--caramel-deep); font-weight:500; white-space:nowrap;
+  }
+  .wa-icon-btn{
+    display:none;
+    width:42px; height:42px; border-radius:12px;
+    background:var(--espresso); align-items:center; justify-content:center;
+    flex-shrink:0;
+  }
+  .wa-icon-btn svg{width:22px; height:22px; fill:var(--cream-soft);}
+  .mobile-nav-brand{display:none;}
+  .mobile-logo-intro{display:none;}
+  nav ul{display:flex; gap:34px;}
+  nav a{
+    font-size:14px; font-weight:500; position:relative; padding-bottom:4px;
+  }
+  nav a::after{
+    content:''; position:absolute; left:0; bottom:0; width:0; height:1px;
+    background:var(--caramel-deep); transition:width .3s ease;
+  }
+  nav a:hover::after{width:100%;}
+  .nav-cta{display:flex; align-items:center; gap:26px;}
+  .menu-toggle{display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none;}
+  .menu-toggle span{width:26px; height:2px; background:var(--espresso);}
+
+  /* HERO */
+  .hero{
+    padding:170px 0 110px;
+    background:
+      radial-gradient(ellipse at 85% 10%, rgba(200,155,117,0.18), transparent 55%),
+      var(--cream);
+    overflow:hidden;
+  }
+  .hero .container{
+    display:grid;
+    grid-template-columns:1.05fr 0.95fr;
+    gap:60px;
+    align-items:center;
+  }
+  .hero h1{
+    font-size:56px;
+    margin:18px 0 24px;
+    letter-spacing:-0.5px;
+  }
+  .hero p.lead{
+    font-size:17px;
+    color:var(--espresso-soft);
+    max-width:480px;
+    margin-bottom:36px;
+  }
+  .hero-ctas{display:flex; gap:16px; flex-wrap:wrap; margin-bottom:44px;}
+  .hero-stats{display:flex; gap:14px; flex-wrap:wrap;}
+  .stat-chip{
+    background:var(--white);
+    border:1px solid rgba(176,141,87,0.25);
+    border-radius:16px;
+    padding:14px 18px;
+    box-shadow:var(--shadow);
+    display:flex; flex-direction:column; gap:2px;
+    min-width:150px;
+  }
+  .stat-chip strong{font-family:'Cormorant Garamond', serif; font-size:22px; color:var(--caramel-deep);}
+  .stat-chip span{font-size:12px; color:var(--espresso-soft); letter-spacing:0.3px;}
+
+  .hero-visual{position:relative;}
+  .blob-frame{
+    position:relative;
+    border-radius:45% 55% 60% 40% / 50% 45% 55% 50%;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    aspect-ratio:4/5;
+  }
+  .blob-frame img{width:100%; height:100%; object-fit:cover;}
+  .hero-visual::before{
+    content:'';
+    position:absolute; top:-30px; right:-30px; width:220px; height:220px;
+    border:1.5px solid var(--caramel);
+    border-radius:50%;
+    opacity:0.5;
+    z-index:-1;
+  }
+  .float-tag{
+    position:absolute;
+    background:var(--espresso);
+    color:var(--cream-soft);
+    padding:14px 20px;
+    border-radius:16px;
+    font-size:13px;
+    box-shadow:0 16px 30px rgba(36,28,23,0.25);
+    display:flex; align-items:center; gap:10px;
+  }
+  .float-tag.tag1{ bottom:36px; left:-30px;}
+  .float-tag.tag2{ top:30px; left:-14px;}
+  .float-tag strong{font-family:'Cormorant Garamond', serif; font-size:18px; color:var(--blush);}
+
+  .wave-divider{
+    width:100%; height:80px; display:block; margin-top:-2px;
+  }
+
+  /* SOBRE */
+  .sobre{background:var(--espresso); color:var(--cream-soft); padding:110px 0;}
+  .sobre h2, .sobre .script{color:var(--cream-soft);}
+  .sobre .container{display:grid; grid-template-columns:0.9fr 1.1fr; gap:70px; align-items:start;}
+  .sobre .eyebrow{color:var(--blush);}
+  .sobre .eyebrow::before{background:var(--blush);}
+  .sobre h2{font-size:42px; margin:16px 0 26px;}
+  .sobre p{color:#DCD1C6; margin-bottom:18px; font-size:16px;}
+  .credentials{margin-top:30px; display:flex; flex-direction:column; gap:16px;}
+  .credential-item{display:flex; gap:14px; align-items:flex-start;}
+  .credential-item .dot{
+    width:8px; height:8px; border-radius:50%; background:var(--blush); margin-top:8px; flex-shrink:0;
+  }
+  .credential-item p{margin:0; color:#EFE7DC; font-size:15px;}
+  blockquote{
+    border-left:2px solid var(--blush);
+    padding-left:22px;
+    margin-top:36px;
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:22px;
+    color:var(--blush);
+  }
+  .sobre-photo-stack{display:flex; gap:16px; margin-top:26px; max-width:420px;}
+  .sobre-photo-main{
+    width:60%; aspect-ratio:3/4; object-fit:cover; border-radius:20px;
+    box-shadow:0 24px 50px rgba(0,0,0,0.35);
+  }
+  .sobre-photo-accent{
+    width:40%; aspect-ratio:3/4; object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 24px 50px rgba(0,0,0,0.35);
+    align-self:flex-end;
+    margin-bottom:0;
+  }
+
+  /* SERVICOS */
+  .servicos{padding:120px 0 100px;}
+  .section-head{max-width:640px; margin-bottom:60px;}
+  .section-head h2{font-size:44px; margin:16px 0 0;}
+  .servicos-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:28px;
+  }
+  .servico-card{
+    background:var(--white);
+    border-radius:24px;
+    padding:36px 30px;
+    box-shadow:var(--shadow);
+    transition:transform .3s ease, box-shadow .3s ease;
+    border:1px solid rgba(176,141,87,0.12);
+  }
+  .servico-card:hover{transform:translateY(-8px); box-shadow:0 26px 50px rgba(36,28,23,0.14);}
+  .servico-icon{
+    width:52px; height:52px; border-radius:50%;
+    background:var(--cream);
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom:22px;
+  }
+  .servico-icon svg{width:24px; height:24px; stroke:var(--caramel-deep);}
+  .servico-card h3{font-size:22px; margin-bottom:12px;}
+  .servico-card p{font-size:14.5px; color:var(--espresso-soft);}
+
+  /* RESULTADOS */
+  .estrutura{position:relative; height:420px; overflow:hidden;}
+  .estrutura-img{width:100%; height:100%;}
+  .estrutura-img img{width:100%; height:100%; object-fit:cover;}
+  .estrutura::after{
+    content:''; position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(36,28,23,0.1) 0%, rgba(36,28,23,0.75) 100%);
+  }
+  .estrutura-caption{
+    position:absolute; left:0; right:0; bottom:0; padding:40px 32px;
+    text-align:center; z-index:2;
+  }
+  .estrutura-caption h3{color:var(--cream-soft); font-size:32px; margin-top:10px;}
+  @media(max-width:640px){
+    .estrutura{height:300px;}
+    .estrutura-caption h3{font-size:24px;}
+  }
+  .resultados{background:var(--cream-soft); padding:120px 0;}
+  .resultados-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:22px;
+  }
+  .case-card{
+    border-radius:22px;
+    overflow:hidden;
+    background:var(--white);
+    box-shadow:var(--shadow);
+  }
+  .case-img{aspect-ratio:4/3; overflow:hidden; background:var(--cream); display:flex; align-items:center; justify-content:center;}
+  .case-img img{width:100%; height:100%; object-fit:contain; transition:transform .5s ease;}
+  .case-card:hover .case-img img{transform:scale(1.06);}
+  .case-info{padding:18px 20px 22px;}
+  .case-info .eyebrow{font-size:11px; margin-bottom:6px;}
+  .case-info h4{font-size:19px; font-weight:600; font-family:'Cormorant Garamond', serif;}
+  .case-disclaimer{
+    text-align:center; font-size:12.5px; color:var(--espresso-soft); margin-top:34px; opacity:0.75;
+  }
+
+  /* QUIZ */
+  .quiz{padding:120px 0; background:var(--cream);}
+  .quiz-box{
+    max-width:720px; margin:0 auto;
+    background:var(--white);
+    border-radius:28px;
+    box-shadow:var(--shadow);
+    padding:52px 56px;
+  }
+  .quiz-progress{
+    display:flex; gap:6px; margin-bottom:30px;
+  }
+  .quiz-progress span{
+    height:4px; flex:1; background:#EDE1D2; border-radius:4px; overflow:hidden;
+  }
+  .quiz-progress span i{display:block; height:100%; background:var(--caramel-deep); width:0%; transition:width .4s ease;}
+  .quiz-step{display:none;}
+  .quiz-step.active{display:block;}
+  .quiz-step .eyebrow{margin-bottom:14px;}
+  .quiz-step h3{font-size:27px; margin-bottom:26px; max-width:560px;}
+  .quiz-options{display:flex; flex-direction:column; gap:12px;}
+  .quiz-option{
+    text-align:left;
+    padding:17px 22px;
+    border-radius:14px;
+    border:1.5px solid #E7DACB;
+    background:var(--cream-soft);
+    font-family:'Jost',sans-serif;
+    font-size:15px;
+    cursor:pointer;
+    transition:all .2s ease;
+  }
+  .quiz-option:hover{border-color:var(--caramel-deep); background:#FBF3E9;}
+  .quiz-nav{display:flex; justify-content:space-between; margin-top:30px; align-items:center;}
+  .quiz-back{font-size:14px; color:var(--espresso-soft); cursor:pointer; background:none; border:none; font-family:'Jost',sans-serif;}
+  .quiz-result{text-align:center;}
+  .quiz-result h3{font-size:30px; margin-bottom:14px;}
+  .quiz-result p{color:var(--espresso-soft); margin-bottom:28px; max-width:480px; margin-left:auto; margin-right:auto;}
+
+  /* DEPOIMENTOS */
+  .depoimentos{padding:120px 0; background:var(--espresso); color:var(--cream-soft);}
+  .depoimentos .eyebrow{color:var(--blush);}
+  .depoimentos .eyebrow::before{background:var(--blush);}
+  .depoimentos h2{color:var(--cream-soft); font-size:42px; margin:16px 0 50px;}
+  .depo-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:26px;}
+  .depo-card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(231,183,166,0.2);
+    border-radius:22px;
+    padding:32px 28px;
+  }
+  .stars{color:var(--blush); font-size:14px; margin-bottom:16px; letter-spacing:2px;}
+  .depo-card p{font-size:15px; color:#EFE7DC; margin-bottom:22px; font-style:italic;}
+  .depo-author{display:flex; align-items:center; gap:12px;}
+  .depo-avatar{
+    width:38px; height:38px; border-radius:50%;
+    background:var(--caramel); color:var(--espresso);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Cormorant Garamond', serif; font-weight:600;
+  }
+  .depo-author strong{font-size:14px; display:block;}
+  .depo-author span{font-size:12px; color:var(--blush);}
+  .depo-note{text-align:center; margin-top:30px; font-size:12.5px; color:#B8A99A;}
+
+  /* FAQ */
+  .faq{padding:120px 0;}
+  .faq-list{max-width:800px; margin:0 auto;}
+  .faq-item{
+    border-bottom:1px solid #E7DACB;
+    padding:26px 0;
+    cursor:pointer;
+  }
+  .faq-q{display:flex; justify-content:space-between; align-items:center; font-size:18px; font-weight:500; font-family:'Cormorant Garamond', serif; font-size:22px;}
+  .faq-icon{font-size:22px; color:var(--caramel-deep); transition:transform .3s ease;}
+  .faq-item.open .faq-icon{transform:rotate(45deg);}
+  .faq-a{
+    max-height:0; overflow:hidden; transition:max-height .35s ease;
+    font-size:15px; color:var(--espresso-soft);
+  }
+  .faq-item.open .faq-a{max-height:220px; margin-top:16px;}
+
+  /* CTA FINAL */
+  .cta-final{
+    padding:110px 0;
+    background:linear-gradient(135deg, var(--caramel) 0%, var(--caramel-deep) 100%);
+    text-align:center;
+    color:var(--espresso);
+  }
+  .cta-final h2{font-size:44px; color:var(--espresso); margin:16px 0 20px;}
+  .cta-final p{max-width:520px; margin:0 auto 34px; color:var(--espresso-soft); font-size:16.5px;}
+  .cta-final .socials{margin-top:30px; display:flex; gap:20px; justify-content:center;}
+  .cta-final .socials a{
+    font-size:14px; font-weight:500; display:flex; align-items:center; gap:8px;
+    border-bottom:1px solid var(--espresso); padding-bottom:2px;
+  }
+
+  /* FOOTER */
+  footer{background:var(--espresso); color:#B8A99A; padding:70px 0 30px;}
+  .footer-grid{
+    display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:50px;
+    padding-bottom:50px; border-bottom:1px solid rgba(255,255,255,0.08);
+  }
+  .footer-brand .name{font-family:'Cormorant Garamond', serif; font-size:24px; color:var(--cream-soft);}
+  .footer-brand p{margin-top:14px; font-size:14px; max-width:320px;}
+  footer h5{color:var(--cream-soft); font-size:13px; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:18px; font-family:'Jost',sans-serif; font-weight:500;}
+  footer ul li{margin-bottom:12px; font-size:14.5px;}
+  footer ul li a:hover{color:var(--blush);}
+  .footer-bottom{
+    padding-top:26px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-size:13px;
+  }
+  .footer-legal{font-size:12px; line-height:1.7; max-width:900px; margin:20px auto 0; opacity:0.65; text-align:center;}
+
+  /* SCROLL REVEAL */
+  .reveal{opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease;}
+  .reveal.visible{opacity:1; transform:translateY(0);}
+
+  @media(max-width:980px){
+    .hero .container{grid-template-columns:1fr;}
+    .hero-visual{order:-1; max-width:380px; margin:0 auto;}
+    .servicos-grid{grid-template-columns:repeat(2,1fr);}
+    .resultados-grid{grid-template-columns:repeat(2,1fr);}
+    .sobre .container{grid-template-columns:1fr; gap:36px;}
+    .depo-grid{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr; gap:34px;}
+    nav{display:none;}
+    .menu-toggle{display:flex;}
+    .brand{display:none;}
+    .btn.wa-btn.btn-primary{display:none;}
+    .wa-icon-btn{display:flex;}
+    .mobile-logo-intro{
+      display:flex; flex-direction:column; align-items:center; text-align:center;
+      padding:110px 24px 40px;
+      background:var(--espresso);
+    }
+    .mobile-logo-intro-icon{width:130px; height:130px; margin-bottom:18px;}
+    .mobile-logo-intro-icon img{width:100%; height:100%; object-fit:contain;}
+    .mobile-logo-intro-name{
+      font-family:'Jost', sans-serif; font-weight:700; font-size:24px;
+      letter-spacing:0.5px; text-transform:uppercase; color:var(--cream-soft);
+    }
+    .mobile-logo-intro-tag{
+      font-size:12px; letter-spacing:0.5px; text-transform:uppercase;
+      color:var(--blush); font-weight:500; margin-top:8px;
+    }
+  }
+  @media(max-width:640px){
+    .container{padding:0 20px;}
+    .hero{padding:150px 0 80px;}
+    .hero h1{font-size:38px;}
+    .servicos-grid{grid-template-columns:1fr;}
+    .resultados-grid{grid-template-columns:1fr 1fr;}
+    .quiz-box{padding:34px 24px;}
+    .float-tag{display:none;}
+    .section-head h2, .sobre h2, .depoimentos h2, .cta-final h2{font-size:32px;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{transition:none !important; animation:none !important;}
+  }
+
+  /* FLOATING WHATSAPP BUTTON */
+  .wa-float{
+    position:fixed; bottom:26px; right:26px; z-index:999;
+    width:60px; height:60px; border-radius:50%;
+    background:#25D366;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 12px 28px rgba(37,211,102,0.45);
+    transition:transform .25s ease;
+  }
+  .wa-float:hover{transform:scale(1.08);}
+  .wa-float svg{width:30px; height:30px; fill:#fff;}
+  @media(max-width:640px){
+    .wa-float{width:54px; height:54px; bottom:18px; right:18px;}
+  }
+</style>
+</head>
+<body>
+
+<section class="mobile-logo-intro" id="mobileLogoIntro">
+  <div class="mobile-logo-intro-icon"><img src="images/logo-icon-transparent.png" alt="Símbolo Dra. Naiara Santos"></div>
+  <span class="mobile-logo-intro-name">Dra. Naiara Santos</span>
+  <span class="mobile-logo-intro-tag">— Fisioterapia &amp; Estética Avançada —</span>
+</section>
+
+<header id="siteHeader">
+  <div class="container">
+    <a href="#hero" class="brand">
+      <div class="brand-badge"><img src="images/logo-icon.jpg" alt="Símbolo Dra. Naiara Santos"></div>
+      <div class="brand-text">
+        <span class="name">Dra. Naiara Santos</span>
+        <span class="tag">— Fisioterapia &amp; Estética Avançada —</span>
+      </div>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Especialidades</a></li>
+        <li><a href="#resultados">Resultados</a></li>
+        <li><a href="#quiz">Quiz</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#faq">Dúvidas</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a href="#" class="btn btn-primary wa-btn" data-msg="Olá, Dra. Naiara! Gostaria de agendar uma avaliação. ✨">Agendar</a>
+      <a href="#" class="wa-icon-btn wa-btn" data-msg="Olá, Dra. Naiara! Gostaria de agendar uma avaliação. ✨" aria-label="Falar no WhatsApp">
+        <svg viewBox="0 0 32 32"><path d="M16.001 3C9.376 3 4 8.373 4 15c0 2.386.7 4.605 1.907 6.47L4 29l7.72-1.86A11.93 11.93 0 0016 27c6.627 0 12-5.373 12-12S22.628 3 16.001 3zm6.964 17.11c-.29.816-1.44 1.5-2.36 1.694-.63.13-1.45.234-4.216-.905-3.54-1.464-5.822-5.06-6-5.3-.176-.24-1.44-1.915-1.44-3.654s.9-2.59 1.223-2.945c.29-.32.63-.4.84-.4.21 0 .42.002.6.01.19.008.45-.072.703.537.29.7.985 2.42 1.07 2.596.086.176.144.383.03.62-.115.24-.173.39-.345.6-.172.21-.36.47-.516.63-.172.176-.35.367-.15.72.2.35.887 1.464 1.905 2.372 1.31 1.166 2.415 1.528 2.766 1.7.35.176.554.147.758-.09.204-.234.87-1.014 1.104-1.363.234-.35.468-.29.79-.176.32.116 2.04.963 2.39 1.137.35.176.585.264.67.41.086.146.086.847-.204 1.663z"/></svg>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="hero-copy">
+      <div class="eyebrow">Fisioterapia Dermato-Funcional &amp; Estética Avançada</div>
+      <h1>Seu corpo em <span class="script">equilíbrio</span>, sua autoestima em primeiro lugar</h1>
+      <p class="lead">Protocolos de drenagem linfática, linfotaping, toxina botulínica estética e contorno corporal pensados para cada fase do seu corpo — da recuperação pós-parto ao cuidado facial. Técnica, acolhimento e resultado real.</p>
+      <div class="hero-ctas">
+        <a href="#" class="btn btn-primary wa-btn" data-msg="Olá, Dra. Naiara! Gostaria de agendar uma avaliação. ✨">Agendar no WhatsApp ✨</a>
+        <a href="#resultados" class="btn btn-outline">Ver Resultados Reais</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-chip"><strong>CEO</strong><span>Imperial Fisio · Horizonte &amp; Pacajus</span></div>
+        <div class="stat-chip"><strong>+3.400</strong><span>Seguidoras no Instagram</span></div>
+        <div class="stat-chip"><strong>Pós-Grad.</strong><span>Estética Avançada</span></div>
+      </div>
+    </div>
+    <div class="hero-visual reveal">
+      <div class="blob-frame">
+        <img src="images/hero-naiara.jpg" alt="Dra. Naiara Santos em seu consultório de fisioterapia dermato-funcional">
+      </div>
+      <div class="float-tag tag1">✦ <span>Linfotaping <strong>certificada</strong></span></div>
+      <div class="float-tag tag2">✦ <span>Toxina Botulínica <strong>Funcional</strong></span></div>
+    </div>
+  </div>
+  <svg class="wave-divider" viewBox="0 0 1440 80" preserveAspectRatio="none">
+    <path d="M0,40 C240,90 480,0 720,30 C960,60 1200,10 1440,40 L1440,80 L0,80 Z" fill="#F7EFE5"></path>
+  </svg>
+</section>
+
+<section class="sobre" id="sobre">
+  <div class="container">
+    <div class="sobre-visual reveal">
+      <div class="eyebrow">A Profissional</div>
+      <h2>Dra. Naiara Santos</h2>
+      <div class="sobre-photo-stack">
+        <img class="sobre-photo-main" src="images/sobre-naiara.jpg" alt="Dra. Naiara Santos em seu consultório, ao lado da logo Dra. Naiara Santos Fisioterapia e Estética Avançada">
+        <img class="sobre-photo-accent" src="images/naiara-desk.jpg" alt="Dra. Naiara Santos atendendo em sua mesa de trabalho">
+      </div>
+      <blockquote>"Nada como um bom tratamento para elevar a autoestima."</blockquote>
+    </div>
+    <div class="sobre-text reveal">
+      <p>Fisioterapeuta especialista em <strong>Dermato-Funcional e Estética Avançada</strong>, a Dra. Naiara Santos une conhecimento técnico e sensibilidade no cuidado com o corpo. Sua filosofia é simples: tratamentos seguros, embasados e que respeitam o tempo de cada paciente — seja no pós-parto, no pós-operatório ou na busca por mais contorno e leveza.</p>
+      <p>Como CEO da <strong>Imperial Fisio</strong>, com unidades em Horizonte e Pacajus (CE), ela lidera uma equipe dedicada a resultados reais, documentados e acompanhados de perto, sessão após sessão.</p>
+      <div class="credentials">
+        <div class="credential-item"><span class="dot"></span><p>Habilitação em Linfotaping (Taping Terapêutico)</p></div>
+        <div class="credential-item"><span class="dot"></span><p>Habilitação em LPF e Toxina Botulínica Estética e Funcional</p></div>
+        <div class="credential-item"><span class="dot"></span><p>Pós-Graduação em Estética Avançada</p></div>
+        <div class="credential-item"><span class="dot"></span><p>CEO Imperial Fisio Horizonte &amp; Imperial Fisio Pacajus</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="servicos" id="servicos">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Especialidades Clínicas</div>
+      <h2>Cuidado <span class="script">completo</span>, do corpo ao rosto</h2>
+    </div>
+    <div class="servicos-grid">
+      <div class="servico-card reveal">
+        <div class="servico-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 21c-4-3-7-6.5-7-10.5A5 5 0 0112 6a5 5 0 017 4.5C19 14.5 16 18 12 21z"/></svg></div>
+        <h3>Fisioterapia Dermato-Funcional</h3>
+        <p>Avaliação e tratamento personalizado para flacidez, gordura localizada, celulite e alterações estéticas da pele, sempre com base clínica.</p>
+      </div>
+      <div class="servico-card reveal">
+        <div class="servico-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 3c3 3 5 6 5 10a5 5 0 01-10 0c0-4 2-7 5-10z"/></svg></div>
+        <h3>Drenagem Linfática</h3>
+        <p>Técnica manual e mecânica para reduzir inchaço, melhorar a circulação e acelerar a recuperação do corpo — inclusive no pós-operatório.</p>
+      </div>
+      <div class="servico-card reveal">
+        <div class="servico-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M4 12h16M4 12c0-3 2-5 4-5M20 12c0 3-2 5-4 5"/></svg></div>
+        <h3>Linfotaping (Taping Terapêutico)</h3>
+        <p>Bandagens funcionais que potencializam a drenagem e sustentam os resultados entre uma sessão e outra, com conforto no dia a dia.</p>
+      </div>
+      <div class="servico-card reveal">
+        <div class="servico-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg></div>
+        <h3>Toxina Botulínica Estética &amp; Funcional</h3>
+        <p>Aplicação terapêutica e estética para suavizar linhas de expressão e tratar disfunções como bruxismo, sempre com critério e naturalidade.</p>
+      </div>
+      <div class="servico-card reveal">
+        <div class="servico-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M7 21c-2-5 0-9 5-9s7 4 5 9M9 12a3 3 0 116 0"/></svg></div>
+        <h3>Protocolos de Contorno &amp; Detox Corporal</h3>
+        <p>Sequências de sessões planejadas para reduzir medidas, melhorar textura da pele e devolver definição ao contorno do corpo.</p>
+      </div>
+      <div class="servico-card reveal">
+        <div class="servico-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 4v4M12 16v4M4 12h4M16 12h4"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <h3>Recuperação Pós-Parto &amp; Pós-Cirúrgica</h3>
+        <p>Acompanhamento próximo para o corpo se recuperar com segurança, reduzindo edema e acelerando a cicatrização com bem-estar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="estrutura reveal">
+  <div class="estrutura-img"><img src="images/clinic-room.jpg" alt="Sala de atendimento da Dra. Naiara Santos, equipada para procedimentos estéticos avançados"></div>
+  <div class="estrutura-caption">
+    <div class="eyebrow" style="color:var(--cream-soft);">Nossa Estrutura</div>
+    <h3>Um espaço pensado para o seu conforto</h3>
+  </div>
+</section>
+
+<section class="resultados" id="resultados">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Resultados Reais</div>
+      <h2>Antes &amp; <span class="script">Depois</span></h2>
+    </div>
+    <div class="resultados-grid">
+      <div class="case-card reveal">
+        <div class="case-img"><img src="images/case-detox.jpg" alt="Antes e depois de protocolo de detox corporal"></div>
+        <div class="case-info"><div class="eyebrow">Contorno</div><h4>Detox Corporal</h4></div>
+      </div>
+      <div class="case-card reveal">
+        <div class="case-img"><img src="images/case-contorno.jpg" alt="Antes e depois de protocolo de contorno corporal"></div>
+        <div class="case-info"><div class="eyebrow">Contorno</div><h4>Resultados Corporais</h4></div>
+      </div>
+      <div class="case-card reveal">
+        <div class="case-img"><img src="images/case-facial.jpg" alt="Antes e depois de tratamento facial"></div>
+        <div class="case-info"><div class="eyebrow">Rosto</div><h4>Rejuvenescimento Facial</h4></div>
+      </div>
+      <div class="case-card reveal">
+        <div class="case-img"><img src="images/case-posparto.jpg" alt="Antes e depois de taping pós-parto"></div>
+        <div class="case-info"><div class="eyebrow">Pós-Parto</div><h4>Taping Pós-Parto</h4></div>
+      </div>
+      <div class="case-card reveal">
+        <div class="case-img"><img src="images/case-radiofreq.jpg" alt="Antes e depois de radiofrequência corporal"></div>
+        <div class="case-info"><div class="eyebrow">Contorno</div><h4>Radiofrequência</h4></div>
+      </div>
+      <div class="case-card reveal">
+        <div class="case-img"><img src="images/case-detox2.jpg" alt="Antes e depois de detox corporal"></div>
+        <div class="case-info"><div class="eyebrow">Contorno</div><h4>Redução de Medidas</h4></div>
+      </div>
+      <div class="case-card reveal">
+        <div class="case-img"><img src="images/case-laser.jpg" alt="Antes e depois de laserterapia para cicatrização"></div>
+        <div class="case-info"><div class="eyebrow">Cicatrização</div><h4>Laserterapia</h4></div>
+      </div>
+    </div>
+    <p class="case-disclaimer">Resultados variam de pessoa para pessoa. Cada caso é avaliado individualmente em consulta.</p>
+  </div>
+</section>
+
+<section class="quiz" id="quiz">
+  <div class="container">
+    <div class="section-head reveal" style="margin:0 auto 44px; text-align:center;">
+      <div class="eyebrow" style="justify-content:center;">Diagnóstico Rápido</div>
+      <h2>Qual <span class="script">protocolo</span> combina com você?</h2>
+    </div>
+    <div class="quiz-box reveal">
+      <div class="quiz-progress"><span><i id="prog1"></i></span><span><i id="prog2"></i></span><span><i id="prog3"></i></span></div>
+
+      <div class="quiz-step active" data-step="1">
+        <div class="eyebrow">Pergunta 1 de 3</div>
+        <h3>Qual área você sente que mais precisa de cuidado agora?</h3>
+        <div class="quiz-options">
+          <button class="quiz-option" data-answer="Corpo (barriga, flancos e medidas)">Meu corpo — barriga, flancos e medidas</button>
+          <button class="quiz-option" data-answer="Pós-parto ou pós-cirúrgico">Recuperação pós-parto ou pós-cirúrgica</button>
+          <button class="quiz-option" data-answer="Rosto e linhas de expressão">Meu rosto — linhas de expressão e viço</button>
+          <button class="quiz-option" data-answer="Inchaço e retenção de líquido">Inchaço e retenção de líquido no dia a dia</button>
+        </div>
+      </div>
+
+      <div class="quiz-step" data-step="2">
+        <div class="eyebrow">Pergunta 2 de 3</div>
+        <h3>Qual é o seu principal objetivo com o tratamento?</h3>
+        <div class="quiz-options">
+          <button class="quiz-option" data-answer="Reduzir medidas e definir o contorno">Reduzir medidas e definir o contorno</button>
+          <button class="quiz-option" data-answer="Recuperar o corpo com segurança">Recuperar o corpo com segurança e conforto</button>
+          <button class="quiz-option" data-answer="Suavizar expressões de forma natural">Suavizar expressões de forma natural</button>
+          <button class="quiz-option" data-answer="Aliviar o inchaço e sentir mais leveza">Aliviar o inchaço e sentir mais leveza</button>
+        </div>
+      </div>
+
+      <div class="quiz-step" data-step="3">
+        <div class="eyebrow">Pergunta 3 de 3</div>
+        <h3>Quando você gostaria de começar?</h3>
+        <div class="quiz-options">
+          <button class="quiz-option" data-answer="O mais rápido possível">O mais rápido possível</button>
+          <button class="quiz-option" data-answer="Nas próximas semanas">Nas próximas semanas</button>
+          <button class="quiz-option" data-answer="Ainda estou pesquisando">Ainda estou pesquisando</button>
+        </div>
+      </div>
+
+      <div class="quiz-step" data-step="result">
+        <div class="quiz-result">
+          <div class="eyebrow" style="justify-content:center;">Pronto!</div>
+          <h3>Sua avaliação personalizada te espera</h3>
+          <p>Com base nas suas respostas, a Dra. Naiara vai te indicar o protocolo ideal. É só chamar no WhatsApp que a conversa já começa com todo o contexto.</p>
+          <a href="#" class="btn btn-primary wa-btn" id="quizWaBtn" data-msg="">Falar com a Dra. Naiara ✨</a>
+        </div>
+      </div>
+
+      <div class="quiz-nav" id="quizNav">
+        <button class="quiz-back" id="quizBack">← Voltar</button>
+        <span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="depoimentos" id="depoimentos">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Relatos Sinceros</div>
+      <h2>O que dizem <span class="script">nossas pacientes</span></h2>
+    </div>
+    <div class="depo-grid">
+      <div class="depo-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Excelente, a recepção sempre agradável, os profissionais muito atenciosos, dedicados com os pacientes. Tudo limpo e organizado, parabéns para o grupo Imperial Fisio."</p>
+        <div class="depo-author"><div class="depo-avatar">F</div><div><strong>Francineide Costa da Silva</strong><span>Google Avaliações</span></div></div>
+      </div>
+      <div class="depo-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"É um ambiente muito agradável, com profissionais excelentes e muito qualificados. E tem um atendimento nota 10."</p>
+        <div class="depo-author"><div class="depo-avatar">K</div><div><strong>Karla Emylle Alves</strong><span>Google Avaliações</span></div></div>
+      </div>
+      <div class="depo-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Atendimento humanizado. Meu filho ama."</p>
+        <div class="depo-author"><div class="depo-avatar">C</div><div><strong>Camila Valeska</strong><span>Google Avaliações</span></div></div>
+      </div>
+    </div>
+    <p class="depo-note">Avaliações reais de pacientes da Imperial Fisio, via Google.</p>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section-head reveal" style="margin-left:auto; margin-right:auto; text-align:center;">
+      <div class="eyebrow" style="justify-content:center;">Dúvidas Frequentes</div>
+      <h2>Perguntas <span class="script">Comuns</span></h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <div class="faq-q"><span>A drenagem linfática e o taping doem?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a"><p>Não. São técnicas suaves e não invasivas. A drenagem é feita com movimentos leves e o taping usa bandagens elásticas confortáveis, sem dor durante ou após a aplicação.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q"><span>Quantas sessões são necessárias para ver resultado?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a"><p>Depende do objetivo e da avaliação inicial. Protocolos de contorno corporal costumam ser feitos em sequência de sessões, enquanto casos pontuais de inchaço podem mostrar diferença já na primeira sessão.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q"><span>A toxina botulínica aplicada pela fisioterapeuta é segura?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a"><p>Sim. A aplicação é feita com habilitação específica, tanto para fins estéticos quanto funcionais (como o controle de bruxismo), sempre respeitando os limites de atuação da fisioterapia.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q"><span>Posso fazer os tratamentos no pós-parto ou pós-cirúrgico?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a"><p>Sim, esse é um dos focos do trabalho da Dra. Naiara. O momento ideal para iniciar é definido em avaliação, respeitando a liberação médica de cada caso.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-final" id="contato">
+  <div class="container">
+    <div class="eyebrow" style="justify-content:center; color:var(--espresso);">Vamos Conversar</div>
+    <h2>Sua avaliação começa <span class="script" style="color:var(--espresso);">com uma mensagem</span></h2>
+    <p>Atendimento em Horizonte &amp; Pacajus, CE. Conte um pouco sobre o que você procura e a Dra. Naiara te responde pessoalmente no WhatsApp.</p>
+    <a href="#" class="btn btn-primary wa-btn" data-msg="Olá, Dra. Naiara! Gostaria de agendar uma avaliação. ✨">Agendar no WhatsApp</a>
+    <div class="socials">
+      <a href="https://www.instagram.com/fisionaiarasantos/" target="_blank" rel="noopener">@fisionaiarasantos</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/logo-full.jpg" alt="Logomarca Dra. Naiara Santos" style="height:90px; width:auto; border-radius:12px; margin-bottom:16px;">
+        <p>Fisioterapia Dermato-Funcional e Estética Avançada. CEO Imperial Fisio Horizonte &amp; Pacajus, CE.</p>
+      </div>
+      <div>
+        <h5>Navegação</h5>
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#servicos">Especialidades</a></li>
+          <li><a href="#resultados">Resultados</a></li>
+          <li><a href="#quiz">Quiz</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contato</h5>
+        <ul>
+          <li><a href="https://www.instagram.com/fisionaiarasantos/" target="_blank" rel="noopener">Instagram @fisionaiarasantos</a></li>
+          <li><a href="#" class="wa-btn" data-msg="Olá, Dra. Naiara! Gostaria de agendar uma avaliação. ✨">WhatsApp (85) 99742-3590</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Dra. Naiara Santos. Todos os direitos reservados.</span>
+      <span>Fisioterapia Dermato-Funcional &amp; Estética Avançada</span>
+    </div>
+    <p class="footer-legal">Os casos clínicos exibidos têm caráter ilustrativo e educativo. Cada paciente possui características individuais e os resultados podem variar, sendo indicada uma avaliação prévia detalhada antes de qualquer procedimento.</p>
+  </div>
+</footer>
+
+<a href="#" class="wa-float wa-btn" data-msg="Olá, Dra. Naiara! Gostaria de agendar uma avaliação. ✨" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16.001 3C9.376 3 4 8.373 4 15c0 2.386.7 4.605 1.907 6.47L4 29l7.72-1.86A11.93 11.93 0 0016 27c6.627 0 12-5.373 12-12S22.628 3 16.001 3zm6.964 17.11c-.29.816-1.44 1.5-2.36 1.694-.63.13-1.45.234-4.216-.905-3.54-1.464-5.822-5.06-6-5.3-.176-.24-1.44-1.915-1.44-3.654s.9-2.59 1.223-2.945c.29-.32.63-.4.84-.4.21 0 .42.002.6.01.19.008.45-.072.703.537.29.7.985 2.42 1.07 2.596.086.176.144.383.03.62-.115.24-.173.39-.345.6-.172.21-.36.47-.516.63-.172.176-.35.367-.15.72.2.35.887 1.464 1.905 2.372 1.31 1.166 2.415 1.528 2.766 1.7.35.176.554.147.758-.09.204-.234.87-1.014 1.104-1.363.234-.35.468-.29.79-.176.32.116 2.04.963 2.39 1.137.35.176.585.264.67.41.086.146.086.847-.204 1.663z"/></svg>
+</a>
+
+<script>
+  // header scroll state
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // whatsapp links
+  const WA_NUMBER = '5585997423590';
+  function setWaHref(el){
+    const msg = el.getAttribute('data-msg') || '';
+    el.setAttribute('href', 'https://wa.me/' + WA_NUMBER + (msg ? ('?text=' + encodeURIComponent(msg)) : ''));
+    el.setAttribute('target','_blank');
+    el.setAttribute('rel','noopener');
+  }
+  document.querySelectorAll('.wa-btn').forEach(setWaHref);
+
+  // mobile menu
+  const menuToggle = document.getElementById('menuToggle');
+  const navEl = document.querySelector('nav');
+  menuToggle.addEventListener('click', () => {
+    const isOpen = navEl.style.display === 'block';
+    navEl.style.display = isOpen ? 'none' : 'block';
+    if(!isOpen){
+      navEl.style.position='absolute';
+      navEl.style.top='72px';
+      navEl.style.left='0';
+      navEl.style.right='0';
+      navEl.style.background='var(--cream-soft)';
+      navEl.style.padding='20px 32px';
+      navEl.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)';
+      navEl.querySelector('ul').style.flexDirection='column';
+      navEl.querySelector('ul').style.gap='18px';
+    }
+  });
+
+  // scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target);} });
+  }, {threshold:0.15});
+  revealEls.forEach(el => io.observe(el));
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.querySelector('.faq-q').addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if(!isOpen) item.classList.add('open');
+    });
+  });
+
+  // QUIZ logic
+  const answers = {};
+  const steps = ['1','2','3','result'];
+  let currentStepIndex = 0;
+  const progBars = [document.getElementById('prog1'), document.getElementById('prog2'), document.getElementById('prog3')];
+  const quizBack = document.getElementById('quizBack');
+
+  function showStep(idx){
+    document.querySelectorAll('.quiz-step').forEach(s => s.classList.remove('active'));
+    document.querySelector('.quiz-step[data-step="'+steps[idx]+'"]').classList.add('active');
+    progBars.forEach((bar, i) => { bar.style.width = i < idx ? '100%' : (i === idx ? '50%' : '0%'); });
+    quizBack.style.visibility = idx === 0 ? 'hidden' : 'visible';
+    document.getElementById('quizNav').style.display = steps[idx] === 'result' ? 'none' : 'flex';
+  }
+
+  document.querySelectorAll('.quiz-option').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const step = btn.closest('.quiz-step').getAttribute('data-step');
+      answers[step] = btn.getAttribute('data-answer');
+      if(currentStepIndex < steps.length - 1){
+        currentStepIndex++;
+        showStep(currentStepIndex);
+      }
+      if(steps[currentStepIndex] === 'result'){
+        const msg = 'Olá, Dra. Naiara! Fiz o quiz do site e minhas respostas foram: '
+          + (answers['1'] ? '1) ' + answers['1'] + '. ' : '')
+          + (answers['2'] ? '2) ' + answers['2'] + '. ' : '')
+          + (answers['3'] ? '3) ' + answers['3'] + '. ' : '')
+          + 'Gostaria de agendar uma avaliação! ✨';
+        const quizBtn = document.getElementById('quizWaBtn');
+        quizBtn.setAttribute('data-msg', msg);
+        setWaHref(quizBtn);
+      }
+    });
+  });
+
+  quizBack.addEventListener('click', () => {
+    if(currentStepIndex > 0){
+      currentStepIndex--;
+      showStep(currentStepIndex);
+    }
+  });
+
+  showStep(0);
+</script>
+
+</body>
+</html>
